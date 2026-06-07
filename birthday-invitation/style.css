@@ -163,12 +163,12 @@ body {
     font-family: var(--font-heading);
     font-size: 1.8rem;
     font-weight: 700;
-    background: linear-gradient(135deg, #fff, #ffd6e7, #fff);
+    background: linear-gradient(135deg, var(--pink-600), var(--purple-500));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     display: inline-block;
-    filter: drop-shadow(0 2px 8px rgba(255, 255, 255, 0.5));
+    filter: drop-shadow(0 2px 8px rgba(235, 47, 150, 0.3));
     letter-spacing: 1px;
 }
 
