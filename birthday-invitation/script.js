@@ -267,10 +267,6 @@ function populateGuestName() {
         greetingEl.style.display = 'block';
         nameTextEl.textContent = `Dear ${formattedName},`;
 
-        // Update the tagline
-        const invitedEl = document.getElementById('invitedText');
-        invitedEl.textContent = `✨ ${formattedName}, You're Invited! ✨`;
-
         // Update page title
         document.title = `🧁 ${formattedName}, You're Invited to ${CONFIG.birthdayName}'s Birthday!`;
 
