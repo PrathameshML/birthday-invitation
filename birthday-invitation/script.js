@@ -6,7 +6,7 @@
 const CONFIG = {
     birthdayName: "Shreesha",
     age: 6,
-    partyDate: "2025-06-14T17:00:00",
+    partyDate: "2026-06-14T17:00:00",
     partyTime: "5:00 PM Onwards",
     venue: "Buntara Bhavan Hall",
     address: "5th Floor, Buntara Bhavan, Pune – 411022",
@@ -231,7 +231,7 @@ function populateContent() {
 
 
     // Date & Time
-    document.getElementById('partyDate').textContent = 'Saturday, 14th June 2025';
+    document.getElementById('partyDate').textContent = 'Sunday, 14th June 2026';
     document.getElementById('partyTime').textContent = CONFIG.partyTime;
 
     // Venue

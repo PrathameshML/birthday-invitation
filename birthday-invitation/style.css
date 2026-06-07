@@ -480,6 +480,41 @@ body {
     50% { transform: translateY(-5px); }
 }
 
+.calendar-page-icon {
+    display: inline-flex;
+    flex-direction: column;
+    width: 70px;
+    height: 70px;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(235, 47, 150, 0.2);
+    border: 2px solid var(--pink-400);
+    line-height: 1;
+    vertical-align: top;
+}
+
+.calendar-page-icon .cal-month {
+    background: var(--pink-500);
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 700;
+    padding: 4px 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.calendar-page-icon .cal-day {
+    color: var(--text-primary);
+    font-size: 2.2rem;
+    font-weight: 800;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-heading);
+}
+
 .detail-card h3 {
     font-family: var(--font-heading);
     font-size: 1.5rem;
