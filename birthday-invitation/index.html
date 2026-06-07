@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🧁 You're Invited! - Shreesha's Birthday Party</title>
+    <meta name="description" content="You're invited to Shreesha's birthday celebration! Join us for a day full of fun, magic and memories!">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Quicksand:wght@300;400;500;600;700&family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Floating candy decorations -->
+    <div class="floating-decorations" id="floatingDecorations"></div>
+
+    <!-- Confetti canvas -->
+    <canvas id="confettiCanvas"></canvas>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="guest-greeting" id="guestGreeting" style="display: none;">
+                <span class="guest-name-text" id="guestNameText"></span>
+            </div>
+            <div class="sparkle-wrapper">
+                <p class="hero-tagline">Join us for a day full of</p>
+                <p class="you-are-invited" id="invitedText">✨ Fun, Magic & Memories! ✨</p>
+            </div>
+            <p class="hero-subtitle">Our little princess</p>
+            <h1 class="birthday-title">
+                <span class="name-line" id="birthdayName">Shreesha</span>
+                <span class="turning-line">is turning <span class="age-highlight" id="ageBadge">6!</span></span>
+            </h1>
+            <div class="hero-photo-frame">
+                <div class="photo-ring">
+                    <img src="shreesha.jpg" alt="Shreesha" class="hero-photo" id="heroPhoto">
+                </div>
+                <div class="photo-sparkles">
+                    <span class="sparkle-dot" style="--i:0">✨</span>
+                    <span class="sparkle-dot" style="--i:1">⭐</span>
+                    <span class="sparkle-dot" style="--i:2">✨</span>
+                    <span class="sparkle-dot" style="--i:3">💖</span>
+                    <span class="sparkle-dot" style="--i:4">✨</span>
+                    <span class="sparkle-dot" style="--i:5">⭐</span>
+                    <span class="sparkle-dot" style="--i:6">✨</span>
+                    <span class="sparkle-dot" style="--i:7">💖</span>
+                </div>
+            </div>
+            <p class="hero-message">Come celebrate with us and make<br>her special day even more magical! 🦄</p>
+            <div class="scroll-hint">
+                <span>Scroll for details</span>
+                <div class="scroll-arrow">↓</div>
+            </div>
+        </div>
+        <img src="candy_land_banner.png" alt="" class="hero-bg-img" id="heroBgImg">
+    </section>
+
+    <!-- Candy Divider -->
+    <div class="candy-divider">
+        <span>🍭</span><span>🍬</span><span>🧁</span><span>🍬</span><span>🍭</span>
+    </div>
+
+    <!-- When & Where Section -->
+    <section class="when-where-section" id="whenWhere">
+        <h2 class="section-title">🍰 When & Where 🍰</h2>
+        
+        <div class="details-grid">
+            <div class="detail-card">
+                <div class="card-icon">📅</div>
+                <h3>When</h3>
+                <p class="detail-main" id="partyDate">Saturday, 14th June 2025</p>
+                <p class="detail-sub" id="partyTime">5:00 PM Onwards</p>
+            </div>
+
+            <div class="detail-card">
+                <div class="card-icon">📍</div>
+                <h3>Where</h3>
+                <p class="detail-main" id="partyVenue">Buntara Bhavan Hall</p>
+                <p class="detail-sub" id="partyAddress">5th Floor, Buntara Bhavan, Pune – 411022</p>
+                <a href="https://maps.app.goo.gl/rX647xaG7x9sNbyw9" target="_blank" rel="noopener noreferrer" class="map-link" id="mapLink">
+                    📌 Open in Google Maps
+                </a>
+            </div>
+        </div>
+
+        <p class="section-footer-text">🎪 Let's laugh, play and celebrate together! 🎪</p>
+    </section>
+
+    <!-- Candy Divider -->
+    <div class="candy-divider candy-divider-alt">
+        <span>🍬</span><span>🍭</span><span>🎂</span><span>🍭</span><span>🍬</span>
+    </div>
+
+    <!-- RSVP Section -->
+    <section class="rsvp-section" id="rsvp">
+        <h2 class="section-title">💌 RSVP 💌</h2>
+        <p class="rsvp-subtitle">Help us plan better! Please mark your response.</p>
+        
+        <form class="rsvp-form" id="rsvpForm">
+            <div class="form-group">
+                <label for="guestName">👤 Your Name</label>
+                <input type="text" id="guestName" placeholder="Enter your name" required>
+            </div>
+
+            <div class="form-group">
+                <label>👨‍👩‍👧‍👦 Number of Guests</label>
+                <div class="guest-count-grid">
+                    <div class="guest-count-item">
+                        <label for="adultCount">🧑 Adults</label>
+                        <div class="counter-control">
+                            <button type="button" class="counter-btn minus" data-target="adultCount">−</button>
+                            <input type="number" id="adultCount" value="1" min="0" max="20" readonly>
+                            <button type="button" class="counter-btn plus" data-target="adultCount">+</button>
+                        </div>
+                    </div>
+                    <div class="guest-count-item">
+                        <label for="childCount">👧 Children <small>(Under 12 yrs)</small></label>
+                        <div class="counter-control">
+                            <button type="button" class="counter-btn minus" data-target="childCount">−</button>
+                            <input type="number" id="childCount" value="0" min="0" max="20" readonly>
+                            <button type="button" class="counter-btn plus" data-target="childCount">+</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="total-guests">
+                    Total Attending: <span id="totalGuests">1</span>
+                </div>
+            </div>
+
+
+            <button type="submit" class="rsvp-button" id="rsvpButton">
+                <span>Send My RSVP 🎀</span>
+            </button>
+        </form>
+
+        <div class="rsvp-success" id="rsvpSuccess" style="display: none;">
+            <div class="success-animation">🎉</div>
+            <h3>Thank You!</h3>
+            <p>Your presence will make her day truly special! 💖</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p class="footer-text">💖 Your presence will make her day truly special! 💖</p>
+            <div class="footer-candies">
+                🍬🍭🍫🍩🧁🎂🍰🍬🍭🍫
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
