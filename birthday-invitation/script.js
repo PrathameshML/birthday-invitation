@@ -6,8 +6,8 @@
 const CONFIG = {
     birthdayName: "Shreesha",
     age: 6,
-    partyDate: "2026-06-14T18:30:00",
-    partyTime: "6:30 PM Onwards",
+    partyDate: "2026-06-14T18:00:00",
+    partyTime: "6 PM Onwards",
     venue: "Buntara Bhavan Hall",
     address: "5th Floor, Buntara Bhavan, Pune – 411022",
     mapLink: "https://maps.app.goo.gl/rX647xaG7x9sNbyw9",
